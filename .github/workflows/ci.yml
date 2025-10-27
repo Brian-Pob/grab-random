@@ -10,9 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v1
+        with:
+          registry-url: 'https://registry.npmjs.org/'
       - run: bun install
       - run: bun test
       - run: bun run build
-      - run: bun publish --access public
+      - run: bun publish --provenance --access public
         env:
           NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}

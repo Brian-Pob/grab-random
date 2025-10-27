@@ -1,0 +1,29 @@
+{
+  "name": "@brian-pob/grab-random",
+  "version": "0.0.1",
+  "author": "Brian Poblete <brianmp.dev@gmail.com> (https://brianmp.dev)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brian-pob/grab-random.git"
+  },
+  "description": "Utility for grabbing a random element from a list and returning that element and the list without that element. (Mainly for practicing publishing to npm)",
+  "module": "index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "^24.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsdown": "^0.15.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -12,7 +12,8 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: "latest"
-          registry-url: "@brian-pob:https://registry.npmjs.org/"
+          registries: |
+            @brian-pob:https://registry.npmjs.org/
       - run: bun install
       - run: bun test
       - run: bun run build

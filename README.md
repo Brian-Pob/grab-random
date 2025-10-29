@@ -1,6 +1,6 @@
 # grab-random
 
-[![npm version](https://badge.fury.io/js/%40brian-pob%2Fgrab-random.svg)](https://badge.fury.io/js/%40brian-pob%2Fgrab-random)
+[![npm version](https://badge.fury.io/js/@brian-pob%2Fgrab-random.svg)](https://badge.fury.io/js/@brian-pob%2Fgrab-random)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A TypeScript utility for selecting a random element from an array and returning both the selected element and the remaining array.

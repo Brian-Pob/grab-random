@@ -1,0 +1,23 @@
+name: CI2
+
+on:
+  push:
+    branches: [ release ]
+
+jobs:
+  test-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "latest"
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - run: bun install
+      - run: bun test
+      - run: bun run build
+      - run: bun publish --provenance --access public
+        env:
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
